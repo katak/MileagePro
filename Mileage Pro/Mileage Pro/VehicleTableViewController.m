@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 katak. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "VehicleTableViewController.h"
 
-@interface ViewController ()
+@interface VehicleTableViewController ()
 
 @end
 
-@implementation ViewController
+@implementation VehicleTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
