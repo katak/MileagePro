@@ -12,6 +12,7 @@
 
 - (instancetype)initWithName:(NSString *)name
 {
+    _name = name;
     return self;
 }
 
@@ -21,6 +22,12 @@
                         year:(int)year
                        color:(NSString *)color
 {
+    _name = name;
+    _make = make;
+    _model = model;
+    _year = year;
+    _color = color;
+    
     return self;
 }
 
