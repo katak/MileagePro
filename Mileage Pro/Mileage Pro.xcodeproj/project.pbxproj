@@ -14,6 +14,7 @@
 		01ADEE341BC3090E0092C3FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01ADEE331BC3090E0092C3FE /* Images.xcassets */; };
 		01ADEE371BC3090E0092C3FE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01ADEE351BC3090E0092C3FE /* LaunchScreen.xib */; };
 		01ADEE431BC3090E0092C3FE /* Mileage_ProTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ADEE421BC3090E0092C3FE /* Mileage_ProTests.m */; };
+		01ADEE4E1BC317C70092C3FE /* Vehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ADEE4D1BC317C70092C3FE /* Vehicle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		01ADEE3C1BC3090E0092C3FE /* Mileage ProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mileage ProTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01ADEE411BC3090E0092C3FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01ADEE421BC3090E0092C3FE /* Mileage_ProTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mileage_ProTests.m; sourceTree = "<group>"; };
+		01ADEE4C1BC317C70092C3FE /* Vehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vehicle.h; sourceTree = "<group>"; };
+		01ADEE4D1BC317C70092C3FE /* Vehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vehicle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				01ADEE2B1BC3090E0092C3FE /* AppDelegate.m */,
 				01ADEE2D1BC3090E0092C3FE /* VehicleTableViewController.h */,
 				01ADEE2E1BC3090E0092C3FE /* VehicleTableViewController.m */,
+				01ADEE4C1BC317C70092C3FE /* Vehicle.h */,
+				01ADEE4D1BC317C70092C3FE /* Vehicle.m */,
 				01ADEE301BC3090E0092C3FE /* Main.storyboard */,
 				01ADEE331BC3090E0092C3FE /* Images.xcassets */,
 				01ADEE351BC3090E0092C3FE /* LaunchScreen.xib */,
@@ -220,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01ADEE4E1BC317C70092C3FE /* Vehicle.m in Sources */,
 				01ADEE2F1BC3090E0092C3FE /* VehicleTableViewController.m in Sources */,
 				01ADEE2C1BC3090E0092C3FE /* AppDelegate.m in Sources */,
 				01ADEE291BC3090E0092C3FE /* main.m in Sources */,
