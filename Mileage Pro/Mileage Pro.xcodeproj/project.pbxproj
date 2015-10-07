@@ -15,6 +15,8 @@
 		01ADEE371BC3090E0092C3FE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01ADEE351BC3090E0092C3FE /* LaunchScreen.xib */; };
 		01ADEE431BC3090E0092C3FE /* Mileage_ProTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ADEE421BC3090E0092C3FE /* Mileage_ProTests.m */; };
 		01ADEE4E1BC317C70092C3FE /* Vehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ADEE4D1BC317C70092C3FE /* Vehicle.m */; };
+		01F86EB81BC4B1F400CC37BA /* VehicleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F86EB61BC4B1F400CC37BA /* VehicleDetailViewController.m */; };
+		01F86EB91BC4B1F400CC37BA /* VehicleDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F86EB71BC4B1F400CC37BA /* VehicleDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,9 @@
 		01ADEE421BC3090E0092C3FE /* Mileage_ProTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mileage_ProTests.m; sourceTree = "<group>"; };
 		01ADEE4C1BC317C70092C3FE /* Vehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vehicle.h; sourceTree = "<group>"; };
 		01ADEE4D1BC317C70092C3FE /* Vehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vehicle.m; sourceTree = "<group>"; };
+		01F86EB51BC4B1F400CC37BA /* VehicleDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleDetailViewController.h; sourceTree = "<group>"; };
+		01F86EB61BC4B1F400CC37BA /* VehicleDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleDetailViewController.m; sourceTree = "<group>"; };
+		01F86EB71BC4B1F400CC37BA /* VehicleDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VehicleDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +91,9 @@
 			children = (
 				01ADEE2A1BC3090E0092C3FE /* AppDelegate.h */,
 				01ADEE2B1BC3090E0092C3FE /* AppDelegate.m */,
+				01F86EB51BC4B1F400CC37BA /* VehicleDetailViewController.h */,
+				01F86EB61BC4B1F400CC37BA /* VehicleDetailViewController.m */,
+				01F86EB71BC4B1F400CC37BA /* VehicleDetailViewController.xib */,
 				01ADEE2D1BC3090E0092C3FE /* VehicleTableViewController.h */,
 				01ADEE2E1BC3090E0092C3FE /* VehicleTableViewController.m */,
 				01ADEE4C1BC317C70092C3FE /* Vehicle.h */,
@@ -207,6 +215,7 @@
 			files = (
 				01ADEE321BC3090E0092C3FE /* Main.storyboard in Resources */,
 				01ADEE371BC3090E0092C3FE /* LaunchScreen.xib in Resources */,
+				01F86EB91BC4B1F400CC37BA /* VehicleDetailViewController.xib in Resources */,
 				01ADEE341BC3090E0092C3FE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01ADEE4E1BC317C70092C3FE /* Vehicle.m in Sources */,
+				01F86EB81BC4B1F400CC37BA /* VehicleDetailViewController.m in Sources */,
 				01ADEE2F1BC3090E0092C3FE /* VehicleTableViewController.m in Sources */,
 				01ADEE2C1BC3090E0092C3FE /* AppDelegate.m in Sources */,
 				01ADEE291BC3090E0092C3FE /* main.m in Sources */,
