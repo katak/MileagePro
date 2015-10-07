@@ -421,6 +421,7 @@
 				01ADEE481BC3090E0092C3FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01ADEE491BC3090E0092C3FE /* Build configuration list for PBXNativeTarget "Mileage ProTests" */ = {
 			isa = XCConfigurationList;
@@ -429,6 +430,7 @@
 				01ADEE4B1BC3090E0092C3FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

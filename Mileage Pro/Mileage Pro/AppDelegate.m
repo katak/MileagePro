@@ -21,7 +21,10 @@
     
     // Override point for customization after application launch.
     VehicleTableViewController *vtvc = [[VehicleTableViewController alloc] init];
-    self.window.rootViewController = vtvc;
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vtvc];
+    
+    self.window.rootViewController = navController;    
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
