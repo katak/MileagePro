@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VehicleTableViewController : UITableViewController
+@interface VehiclesViewController : UITableViewController
 
 
 @end

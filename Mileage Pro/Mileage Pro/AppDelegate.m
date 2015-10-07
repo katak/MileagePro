@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "VehicleTableViewController.h"
+#import "VehiclesViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +20,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     // Override point for customization after application launch.
-    VehicleTableViewController *vtvc = [[VehicleTableViewController alloc] init];
+    VehiclesViewController *vtvc = [[VehiclesViewController alloc] init];
     
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vtvc];
     

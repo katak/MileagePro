@@ -6,16 +6,17 @@
 //  Copyright (c) 2015 katak. All rights reserved.
 //
 
-#import "VehicleTableViewController.h"
+#import "VehiclesViewController.h"
+#import "VehicleDetailViewController.h"
 #import "Vehicle.h"
 
-@interface VehicleTableViewController ()
+@interface VehiclesViewController ()
 
 @property (nonatomic) NSMutableArray *privateVehicles;
 
 @end
 
-@implementation VehicleTableViewController
+@implementation VehiclesViewController
 
 - (instancetype)init
 {
@@ -40,6 +41,12 @@
 - (instancetype)initWithStyle:(UITableViewStyle)style
 {
     return [self init];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    VehicleDetailViewController *vdvc = [[VehicleDetailViewController alloc] init];
+    [self.navigationController pushViewController:vdvc animated:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
