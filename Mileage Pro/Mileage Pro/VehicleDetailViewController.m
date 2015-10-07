@@ -33,4 +33,18 @@
     self.yearField.text = [NSString stringWithFormat:@"%d", vehicle.year];
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [self.view endEditing:YES];
+    
+    Vehicle *vehicle = self.vehicle;
+    vehicle.name = self.nameField.text;
+    vehicle.make = self.makeField.text;
+    vehicle.model = self.modelField.text;
+    vehicle.color = self.colorField.text;
+    vehicle.year = [self.yearField.text intValue];
+}
+
 @end

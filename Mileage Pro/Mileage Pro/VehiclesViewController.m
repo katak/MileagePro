@@ -43,6 +43,13 @@
     return [self init];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     VehicleDetailViewController *vdvc = [[VehicleDetailViewController alloc] init];
