@@ -46,6 +46,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     VehicleDetailViewController *vdvc = [[VehicleDetailViewController alloc] init];
+    Vehicle *selectedVehicle = self.privateVehicles[indexPath.row];
+    vdvc.vehicle = selectedVehicle;
     [self.navigationController pushViewController:vdvc animated:YES];
 }
 

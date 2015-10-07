@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class Vehicle;
+
 @interface VehicleDetailViewController : UIViewController
+
+@property (nonatomic, strong) Vehicle *vehicle;
 
 @end

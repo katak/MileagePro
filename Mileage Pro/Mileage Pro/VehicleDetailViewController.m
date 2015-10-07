@@ -7,6 +7,7 @@
 //
 
 #import "VehicleDetailViewController.h"
+#import "Vehicle.h"
 
 @interface VehicleDetailViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
@@ -19,6 +20,17 @@
 
 @implementation VehicleDetailViewController
 
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    Vehicle *vehicle = self.vehicle;
+    
+    self.nameField.text = vehicle.name;
+    self.makeField.text = vehicle.make;
+    self.modelField.text = vehicle.model;
+    self.colorField.text = vehicle.color;
+    self.yearField.text = [NSString stringWithFormat:@"%d", vehicle.year];
+}
 
 @end
