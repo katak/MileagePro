@@ -25,6 +25,9 @@
         self.privateVehicles = [[NSMutableArray alloc] init];
     }
     if (self) {
+        UINavigationItem *navItem = self.navigationItem;
+        navItem.title = @"My Vehicles";
+        
         for (int i = 0; i < 5; i++) {
             Vehicle *vehicle = [[Vehicle alloc] initWithName:@"My Car"
                                                         make:@"Mazda"
