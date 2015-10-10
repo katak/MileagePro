@@ -15,6 +15,6 @@
 @property (nonatomic, readonly, copy) NSArray *allVehicles;
 
 + (instancetype)sharedStore;
-- (Vehicle *)createItem;
-
+- (Vehicle *)createVehicle;
+- (void)deleteVehicle:(Vehicle *)vehicle;
 @end

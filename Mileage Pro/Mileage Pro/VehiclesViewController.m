@@ -25,7 +25,7 @@
         self.navigationItem.rightBarButtonItem = addButton;
         
         for (int i = 0; i < 5; i++) {
-            [[VehicleStore sharedStore] createItem];
+            [[VehicleStore sharedStore] createVehicle];
         }
     }
     
@@ -53,7 +53,7 @@
 
 - (void)addVehicle
 {
-    Vehicle *vehicle = [[VehicleStore sharedStore] createItem];
+    Vehicle *vehicle = [[VehicleStore sharedStore] createVehicle];
     NSInteger lastRow = [[[VehicleStore sharedStore] allVehicles] indexOfObject:vehicle];
     
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];

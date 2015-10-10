@@ -50,7 +50,7 @@
     return [self.privateVehicles copy];
 }
 
-- (Vehicle *)createItem
+- (Vehicle *)createVehicle
 {
     Vehicle *vehicle = [[Vehicle alloc] initWithName:@"My Car"
                                                 make:@"Mazda"
@@ -61,6 +61,11 @@
     [self.privateVehicles addObject:vehicle];
     
     return vehicle;
+}
+
+- (void)deleteVehicle:(Vehicle *)vehicle
+{
+    [self.privateVehicles removeObjectIdenticalTo:vehicle];
 }
 
 @end
