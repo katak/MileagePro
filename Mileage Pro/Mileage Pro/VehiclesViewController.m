@@ -8,33 +8,24 @@
 
 #import "VehiclesViewController.h"
 #import "VehicleDetailViewController.h"
+#import "VehicleStore.h"
 #import "Vehicle.h"
-
-@interface VehiclesViewController ()
-
-@property (nonatomic) NSMutableArray *privateVehicles;
-
-@end
 
 @implementation VehiclesViewController
 
 - (instancetype)init
 {
     self = [super initWithStyle:UITableViewStylePlain];
-    if (!self.privateVehicles) {
-        self.privateVehicles = [[NSMutableArray alloc] init];
-    }
+    
     if (self) {
         UINavigationItem *navItem = self.navigationItem;
         navItem.title = @"My Vehicles";
+
+        UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addVehicle)];
+        self.navigationItem.rightBarButtonItem = addButton;
         
         for (int i = 0; i < 5; i++) {
-            Vehicle *vehicle = [[Vehicle alloc] initWithName:@"My Car"
-                                                        make:@"Mazda"
-                                                       model:@"3"
-                                                        year:2012
-                                                       color:@"Indigo"];
-            [self.privateVehicles addObject:vehicle];
+            [[VehicleStore sharedStore] createItem];
         }
     }
     
@@ -46,6 +37,13 @@
     return [self init];
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -53,27 +51,42 @@
     [self.tableView reloadData];
 }
 
+- (void)addVehicle
+{
+    Vehicle *vehicle = [[VehicleStore sharedStore] createItem];
+    NSInteger lastRow = [[[VehicleStore sharedStore] allVehicles] indexOfObject:vehicle];
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
+    
+    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
+}
+
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     VehicleDetailViewController *vdvc = [[VehicleDetailViewController alloc] init];
-    Vehicle *selectedVehicle = self.privateVehicles[indexPath.row];
+
+    NSArray *vehicles = [[VehicleStore sharedStore] allVehicles];
+    Vehicle *selectedVehicle = vehicles[indexPath.row];
+
     vdvc.vehicle = selectedVehicle;
     [self.navigationController pushViewController:vdvc animated:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"%lu", (unsigned long)[self.privateVehicles count]);
-    return [self.privateVehicles count];
+    return [[[VehicleStore sharedStore] allVehicles] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
-    Vehicle *vehicle = self.privateVehicles[indexPath.row];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+    
+    NSArray *vehicles = [[VehicleStore sharedStore] allVehicles];
+    Vehicle *vehicle = vehicles[indexPath.row];
     
     cell.textLabel.text = [vehicle description];
-    NSLog(@"%@", cell.textLabel.text);
+    
     return cell;
 }
 

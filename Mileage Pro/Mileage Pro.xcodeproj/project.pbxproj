@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0106A9271BC89C8B004415CD /* VehicleStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 0106A9261BC89C8B004415CD /* VehicleStore.m */; };
 		01ADEE291BC3090E0092C3FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ADEE281BC3090E0092C3FE /* main.m */; };
 		01ADEE2C1BC3090E0092C3FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ADEE2B1BC3090E0092C3FE /* AppDelegate.m */; };
 		01ADEE2F1BC3090E0092C3FE /* VehiclesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ADEE2E1BC3090E0092C3FE /* VehiclesViewController.m */; };
@@ -30,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0106A9251BC89C8B004415CD /* VehicleStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleStore.h; sourceTree = "<group>"; };
+		0106A9261BC89C8B004415CD /* VehicleStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleStore.m; sourceTree = "<group>"; };
 		01ADEE231BC3090E0092C3FE /* Mileage Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mileage Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01ADEE271BC3090E0092C3FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01ADEE281BC3090E0092C3FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -102,6 +105,8 @@
 				01ADEE331BC3090E0092C3FE /* Images.xcassets */,
 				01ADEE351BC3090E0092C3FE /* LaunchScreen.xib */,
 				01ADEE261BC3090E0092C3FE /* Supporting Files */,
+				0106A9251BC89C8B004415CD /* VehicleStore.h */,
+				0106A9261BC89C8B004415CD /* VehicleStore.m */,
 			);
 			path = "Mileage Pro";
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 			files = (
 				01ADEE4E1BC317C70092C3FE /* Vehicle.m in Sources */,
 				01F86EB81BC4B1F400CC37BA /* VehicleDetailViewController.m in Sources */,
+				0106A9271BC89C8B004415CD /* VehicleStore.m in Sources */,
 				01ADEE2F1BC3090E0092C3FE /* VehiclesViewController.m in Sources */,
 				01ADEE2C1BC3090E0092C3FE /* AppDelegate.m in Sources */,
 				01ADEE291BC3090E0092C3FE /* main.m in Sources */,
