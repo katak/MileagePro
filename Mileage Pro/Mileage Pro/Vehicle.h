@@ -10,6 +10,7 @@
 
 @interface Vehicle : NSObject
 
+@property (nonatomic, copy) NSString *vehicleKey;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *make;
 @property (nonatomic, copy) NSString *model;

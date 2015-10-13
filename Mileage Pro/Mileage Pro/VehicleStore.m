@@ -8,6 +8,7 @@
 
 #import "VehicleStore.h"
 #import "Vehicle.h"
+#import "VehicleImageStore.h"
 
 @interface VehicleStore ()
 
@@ -66,6 +67,10 @@
 
 - (void)deleteVehicle:(Vehicle *)vehicle
 {
+    NSString *key = vehicle.vehicleKey;
+    
+    [[VehicleImageStore sharedStore] deleteImageForKey:key];
+    
     [self.privateVehicles removeObjectIdenticalTo:vehicle];
 }
 

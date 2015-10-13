@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0106A9271BC89C8B004415CD /* VehicleStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 0106A9261BC89C8B004415CD /* VehicleStore.m */; };
+		0117384D1BCC900C00FDC71A /* VehicleImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117384C1BCC900C00FDC71A /* VehicleImageStore.m */; };
 		01ADEE291BC3090E0092C3FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ADEE281BC3090E0092C3FE /* main.m */; };
 		01ADEE2C1BC3090E0092C3FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ADEE2B1BC3090E0092C3FE /* AppDelegate.m */; };
 		01ADEE2F1BC3090E0092C3FE /* VehiclesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ADEE2E1BC3090E0092C3FE /* VehiclesViewController.m */; };
@@ -33,6 +34,8 @@
 /* Begin PBXFileReference section */
 		0106A9251BC89C8B004415CD /* VehicleStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleStore.h; sourceTree = "<group>"; };
 		0106A9261BC89C8B004415CD /* VehicleStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleStore.m; sourceTree = "<group>"; };
+		0117384B1BCC900C00FDC71A /* VehicleImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleImageStore.h; sourceTree = "<group>"; };
+		0117384C1BCC900C00FDC71A /* VehicleImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleImageStore.m; sourceTree = "<group>"; };
 		01ADEE231BC3090E0092C3FE /* Mileage Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mileage Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01ADEE271BC3090E0092C3FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01ADEE281BC3090E0092C3FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 				01ADEE2B1BC3090E0092C3FE /* AppDelegate.m */,
 				01F86EB51BC4B1F400CC37BA /* VehicleDetailViewController.h */,
 				01F86EB61BC4B1F400CC37BA /* VehicleDetailViewController.m */,
+				0117384B1BCC900C00FDC71A /* VehicleImageStore.h */,
+				0117384C1BCC900C00FDC71A /* VehicleImageStore.m */,
 				01F86EB71BC4B1F400CC37BA /* VehicleDetailViewController.xib */,
 				01ADEE2D1BC3090E0092C3FE /* VehiclesViewController.h */,
 				01ADEE2E1BC3090E0092C3FE /* VehiclesViewController.m */,
@@ -243,6 +248,7 @@
 				01F86EB81BC4B1F400CC37BA /* VehicleDetailViewController.m in Sources */,
 				0106A9271BC89C8B004415CD /* VehicleStore.m in Sources */,
 				01ADEE2F1BC3090E0092C3FE /* VehiclesViewController.m in Sources */,
+				0117384D1BCC900C00FDC71A /* VehicleImageStore.m in Sources */,
 				01ADEE2C1BC3090E0092C3FE /* AppDelegate.m in Sources */,
 				01ADEE291BC3090E0092C3FE /* main.m in Sources */,
 			);

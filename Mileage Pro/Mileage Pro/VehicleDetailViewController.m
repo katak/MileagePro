@@ -9,8 +9,10 @@
 #import "VehicleDetailViewController.h"
 #import "VehicleStore.h"
 #import "Vehicle.h"
+#import "VehicleImageStore.h"
 
 @interface VehicleDetailViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *makeField;
 @property (weak, nonatomic) IBOutlet UITextField *modelField;
@@ -56,6 +58,12 @@
     self.modelField.text = vehicle.model;
     self.colorField.text = vehicle.color;
     self.yearField.text = [NSString stringWithFormat:@"%d", vehicle.year];
+    
+    NSString *vehicleKey = self.vehicle.vehicleKey;
+    
+    UIImage *imageToDisplay = [[VehicleImageStore sharedStore] imageForKey:vehicleKey];
+    
+    self.imageView.image = imageToDisplay;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -101,8 +109,11 @@
 {
     UIImage *image = info[UIImagePickerControllerOriginalImage];
 
+    [[VehicleImageStore sharedStore] setImage:image forKey:self.vehicle.vehicleKey];
+    
     self.imageView.image = image;
     
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
+
 @end

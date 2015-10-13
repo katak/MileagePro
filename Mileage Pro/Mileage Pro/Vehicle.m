@@ -28,6 +28,10 @@
     _year = year;
     _color = color;
     
+    NSUUID *uuid = [[NSUUID alloc] init];
+    NSString *key = [uuid UUIDString];
+    _vehicleKey = key;
+    
     return self;
 }
 
