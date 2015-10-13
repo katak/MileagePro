@@ -7,6 +7,7 @@
 //
 
 #import "VehicleDetailViewController.h"
+#import "VehicleStore.h"
 #import "Vehicle.h"
 
 @interface VehicleDetailViewController ()
@@ -19,6 +20,29 @@
 @end
 
 @implementation VehicleDetailViewController
+
+- (instancetype)initForNewVehicle:(BOOL)isNew
+{
+    self = [super initWithNibName:nil bundle:nil];
+    
+    if (self) {
+        if (isNew) {
+            UIBarButtonItem *doneItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(save:)];
+            self.navigationItem.rightBarButtonItem = doneItem;
+            
+            UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)];
+            self.navigationItem.leftBarButtonItem = cancelItem;
+        }
+    }
+    
+    return self;
+}
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    [NSException raise:@"Wrong initializer" format:@"Use initForNewItem:"];
+    return nil;
+}
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -45,6 +69,18 @@
     vehicle.model = self.modelField.text;
     vehicle.color = self.colorField.text;
     vehicle.year = [self.yearField.text intValue];
+}
+
+- (void)save:(id)sender
+{
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:self.dismissBlock];
+}
+
+- (void)cancel:(id)sender
+{
+    [[VehicleStore sharedStore] deleteVehicle:self.vehicle];
+    
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:self.dismissBlock];
 }
 
 @end

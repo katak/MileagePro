@@ -12,6 +12,9 @@
 
 @interface VehicleDetailViewController : UIViewController
 
+- (instancetype)initForNewVehicle:(BOOL)isNew;
+
 @property (nonatomic, strong) Vehicle *vehicle;
+@property (nonatomic, copy) void (^dismissBlock)(void);
 
 @end

@@ -54,18 +54,24 @@
 
 - (void)addVehicle
 {
-    Vehicle *vehicle = [[VehicleStore sharedStore] createVehicle];
-    NSInteger lastRow = [[[VehicleStore sharedStore] allVehicles] indexOfObject:vehicle];
+    Vehicle *newVehicle = [[VehicleStore sharedStore] createVehicle];
+
+    VehicleDetailViewController *detailViewController = [[VehicleDetailViewController alloc] initForNewVehicle:YES];
+    detailViewController.vehicle = newVehicle;
     
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
+    detailViewController.dismissBlock = ^{
+        [self.tableView reloadData];
+    };
     
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:detailViewController];
+    
+    [self presentViewController:navController animated:YES completion:NULL];
 }
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    VehicleDetailViewController *vdvc = [[VehicleDetailViewController alloc] init];
+    VehicleDetailViewController *vdvc = [[VehicleDetailViewController alloc] initForNewVehicle:NO];
 
     NSArray *vehicles = [[VehicleStore sharedStore] allVehicles];
     Vehicle *selectedVehicle = vehicles[indexPath.row];
