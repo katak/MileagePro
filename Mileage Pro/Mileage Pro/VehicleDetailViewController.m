@@ -10,12 +10,13 @@
 #import "VehicleStore.h"
 #import "Vehicle.h"
 
-@interface VehicleDetailViewController ()
+@interface VehicleDetailViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *makeField;
 @property (weak, nonatomic) IBOutlet UITextField *modelField;
 @property (weak, nonatomic) IBOutlet UITextField *colorField;
 @property (weak, nonatomic) IBOutlet UITextField *yearField;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -83,4 +84,25 @@
     [self.presentingViewController dismissViewControllerAnimated:YES completion:self.dismissBlock];
 }
 
+- (IBAction)takePicture:(id)sender {
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    } else {
+        imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    
+    imagePicker.delegate = self;
+    [self presentViewController:imagePicker animated:YES completion:NULL];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+
+    self.imageView.image = image;
+    
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
 @end
