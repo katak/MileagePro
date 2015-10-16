@@ -10,6 +10,7 @@
 #import "VehicleDetailViewController.h"
 #import "VehicleStore.h"
 #import "Vehicle.h"
+#import "VehicleCell.h"
 
 @implementation VehiclesViewController
 
@@ -41,7 +42,9 @@
 {
     [super viewDidLoad];
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+    UINib *nib = [UINib nibWithNibName:@"VehicleCell" bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"VehicleCell"];
+    
     self.tableView.allowsMultipleSelectionDuringEditing = NO;
 }
 
@@ -87,12 +90,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+    VehicleCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VehicleCell" forIndexPath:indexPath];
     
     NSArray *vehicles = [[VehicleStore sharedStore] allVehicles];
     Vehicle *vehicle = vehicles[indexPath.row];
     
-    cell.textLabel.text = [vehicle description];
+    cell.nameLabel.text = [vehicle description];
+    cell.trimLabel.text = @"Trim goes here";
     
     return cell;
 }

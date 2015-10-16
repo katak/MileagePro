@@ -16,13 +16,13 @@
                         <rect key="frame" x="0.0" y="1" width="44" height="44"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gp0-DL-2Sr">
-                        <rect key="frame" x="52" y="23" width="196" height="21"/>
+                        <rect key="frame" x="52" y="24" width="260" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZM-1m-Stc">
-                        <rect key="frame" x="52" y="7" width="196" height="21"/>
+                        <rect key="frame" x="52" y="8" width="260" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -30,24 +30,11 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
-                <outlet property="nameLabel" destination="1Ft-Qg-Udc" id="QRQ-kU-9Bd"/>
-                <outlet property="thumbnailView" destination="1Ft-Qg-Udc" id="AQ1-3C-4dh"/>
-                <outlet property="trimLabel" destination="1Ft-Qg-Udc" id="nvO-vC-vSO"/>
+                <outlet property="nameLabel" destination="RZM-1m-Stc" id="tka-2h-gNv"/>
+                <outlet property="thumbnailView" destination="HIM-jP-I86" id="yAN-su-d0d"/>
+                <outlet property="trimLabel" destination="Gp0-DL-2Sr" id="qVd-Iz-AD6"/>
             </connections>
-            <point key="canvasLocation" x="634" y="300"/>
+            <point key="canvasLocation" x="634" y="297"/>
         </tableViewCell>
-        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="FUc-aV-NvV">
-            <rect key="frame" x="0.0" y="0.0" width="41" height="32"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <point key="canvasLocation" x="458.5" y="594"/>
-        </imageView>
-        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Thr-2n-9o4">
-            <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-            <nil key="highlightedColor"/>
-            <point key="canvasLocation" x="511" y="683.5"/>
-        </label>
     </objects>
 </document>

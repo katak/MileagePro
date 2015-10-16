@@ -10,8 +10,8 @@
 #import <UIKit/UIKit.h>
 
 @interface VehicleCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIView *thumbnailView;
-@property (weak, nonatomic) IBOutlet UIView *nameLabel;
-@property (weak, nonatomic) IBOutlet UIView *trimLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *thumbnailView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *trimLabel;
 
 @end
