@@ -98,6 +98,8 @@
     cell.nameLabel.text = [vehicle description];
     cell.trimLabel.text = @"Trim goes here";
     
+    cell.thumbnailView.image = vehicle.thumbnail;
+    
     return cell;
 }
 

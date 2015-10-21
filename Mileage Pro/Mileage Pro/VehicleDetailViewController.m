@@ -108,6 +108,8 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *image = info[UIImagePickerControllerOriginalImage];
+    
+    [self.vehicle setThumbnailFromImage:image];
 
     [[VehicleImageStore sharedStore] setImage:image forKey:self.vehicle.vehicleKey];
     

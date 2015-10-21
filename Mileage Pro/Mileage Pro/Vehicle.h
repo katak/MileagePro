@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface Vehicle : NSObject
 
@@ -16,6 +17,7 @@
 @property (nonatomic, copy) NSString *model;
 @property (nonatomic) int year;
 @property (nonatomic, copy) NSString *color;
+@property (nonatomic, strong) UIImage *thumbnail;
 
 - (instancetype)initWithName:(NSString *)name;
 - (instancetype)initWithName:(NSString *)name
@@ -23,6 +25,7 @@
                        model:(NSString *)model
                         year:(int)year
                        color:(NSString *)color;
+- (void)setThumbnailFromImage:(UIImage *)image;
 - (NSString *)description;
 
 @end
