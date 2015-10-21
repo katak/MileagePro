@@ -12,29 +12,50 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GbZ-0P-4VJ" id="1Ft-Qg-Udc">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HIM-jP-I86">
-                        <rect key="frame" x="0.0" y="1" width="44" height="44"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HIM-jP-I86">
+                        <rect key="frame" x="2" y="2" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="6va-8x-7XK"/>
+                            <constraint firstAttribute="height" constant="40" id="B8d-6s-wOA"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gp0-DL-2Sr">
-                        <rect key="frame" x="52" y="24" width="260" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZM-1m-Stc">
-                        <rect key="frame" x="52" y="8" width="260" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZM-1m-Stc">
+                        <rect key="frame" x="50" y="2" width="262" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="lzi-HN-3Ha"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gp0-DL-2Sr">
+                        <rect key="frame" x="50" y="26" width="262" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="Ag5-l7-QNz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="RZM-1m-Stc" firstAttribute="leading" secondItem="HIM-jP-I86" secondAttribute="trailing" constant="8" id="8is-Uc-7h3"/>
+                    <constraint firstItem="HIM-jP-I86" firstAttribute="leading" secondItem="1Ft-Qg-Udc" secondAttribute="leading" constant="2" id="GDi-ms-h3x"/>
+                    <constraint firstAttribute="centerY" secondItem="HIM-jP-I86" secondAttribute="centerY" id="LmP-nh-0X7"/>
+                    <constraint firstItem="Gp0-DL-2Sr" firstAttribute="leading" secondItem="HIM-jP-I86" secondAttribute="trailing" constant="8" id="ZuS-cC-Eb3"/>
+                    <constraint firstAttribute="trailing" secondItem="Gp0-DL-2Sr" secondAttribute="trailing" constant="8" id="h3N-eq-yXw"/>
+                    <constraint firstAttribute="trailing" secondItem="RZM-1m-Stc" secondAttribute="trailing" constant="8" id="hMf-74-BDk"/>
+                    <constraint firstAttribute="bottom" secondItem="Gp0-DL-2Sr" secondAttribute="bottom" constant="2" id="kL9-6d-ZJN"/>
+                    <constraint firstItem="Gp0-DL-2Sr" firstAttribute="top" relation="greaterThanOrEqual" secondItem="RZM-1m-Stc" secondAttribute="bottom" constant="3" id="rdv-tM-dzM"/>
+                    <constraint firstItem="RZM-1m-Stc" firstAttribute="top" secondItem="1Ft-Qg-Udc" secondAttribute="top" constant="2" id="sy4-iZ-xcc"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="nameLabel" destination="RZM-1m-Stc" id="tka-2h-gNv"/>
                 <outlet property="thumbnailView" destination="HIM-jP-I86" id="yAN-su-d0d"/>
                 <outlet property="trimLabel" destination="Gp0-DL-2Sr" id="qVd-Iz-AD6"/>
             </connections>
-            <point key="canvasLocation" x="634" y="297"/>
+            <point key="canvasLocation" x="619" y="681"/>
         </tableViewCell>
     </objects>
 </document>
